@@ -1,6 +1,6 @@
 # ZaverecnyProjekt
-#Září - Obstarání součástek, začít
-#Říjen - Zapojení obvodu, softwarová stránka věci
-Listopad - Začít s dokumentací, Dokončení softwaru
-Prosinec - Vylepšování projektu
-Leden - Dokončení projektu a dokumentace
+<br>Září - Obstarání součástek, začít
+<br>Říjen - Zapojení obvodu, softwarová stránka věci
+<br>Listopad - Začít s dokumentací, Dokončení softwaru
+<br>Prosinec - Vylepšování projektu
+<br>Leden - Dokončení projektu a dokumentace
