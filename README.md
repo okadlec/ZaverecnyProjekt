@@ -4,3 +4,4 @@
 <br>Listopad - Začít s dokumentací, Dokončení softwaru
 <br>Prosinec - Vylepšování projektu
 <br>Leden - Dokončení projektu a dokumentace
+<link>https://www.youtube.com/watch?v=qXjjVqQwLyY</link>
