@@ -5,3 +5,6 @@
 <br>Prosinec - Vylepšování projektu
 <br>Leden - Dokončení projektu a dokumentace
 <link>https://www.youtube.com/watch?v=qXjjVqQwLyY</link>
+https://randomnerdtutorials.com/fingerprint-sensor-module-with-arduino/
+
+<br>Cílem je vytvořit zámek do dveří ovládaný pomocí čtečky otisku prstů. Logy se budou nahrávat na server a ukládat do souboru JSON.
