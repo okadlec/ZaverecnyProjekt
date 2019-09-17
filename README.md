@@ -11,14 +11,14 @@
 
 <br>Schéma zapojení čtečky:
 https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.png
--<code>
--#include <ESP8266WiFi.h>        // Include the Wi-Fi library
--#include <PubSubClient.h>
+- <code>
+- #include <ESP8266WiFi.h>        // Include the Wi-Fi library
+- #include <PubSubClient.h>
 -
--const char* ssid     = "ESPNet";         // The SSID (name) of the Wi-Fi network you want to connect to
--const char* password = "";     // The password of the Wi-Fi network
+- const char* ssid     = "ESPNet";         // The SSID (name) of the Wi-Fi network you want to connect to
+- const char* password = "";     // The password of the Wi-Fi network
 -
--void setup() {
+- void setup() {
  - Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   -delay(1000);
  - Serial.println('\n');
@@ -31,12 +31,12 @@ https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.
  - while (WiFi.status() != WL_CONNECTED) { // Wait for the Wi-Fi to connect
   -  delay(1000);
   -  Serial.print(++i); Serial.print(' ');
-  -}
+  - }
 
  - Serial.println('\n');
   -Serial.println("Connection established!");  
  - Serial.print("IP address:\t");
  - Serial.println(WiFi.localIP());         // Send the IP address of the ESP8266 to the computer
--}
+- }
 
--void loop() { }</code>
+- void loop() { }</code>
