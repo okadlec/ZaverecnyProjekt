@@ -101,11 +101,4 @@ void loop()
   client.loop();
 }
 
-// set the LCD address to 0x27 for a 16 chars and 2 line display
-/*
-void setup()
-{
 
-  lcd.setCursor(0,0);
-  lcd.print("Michal Prokes");
-}*/
