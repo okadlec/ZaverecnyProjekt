@@ -47,3 +47,4 @@ https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.
 -
 - pio device monitor -b 115200
 - https://www.instructables.com/id/NodeMCU-MQTT-Basic-Example/
+- https://github.com/adibbazli/fingerprint-attendance
