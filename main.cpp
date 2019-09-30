@@ -1,17 +1,5 @@
- /* lcd.setCursor(0,0);
-  lcd.print("Jakub  ");
-  lcd.setCursor(0,1);
-  lcd.print("Rehacek");   
-  delay(1500);
- lcd.setCursor(0,0);
-  lcd.print("Erik   ");
-  lcd.setCursor(0,1);
-  lcd.print("Galinski");  
-  delay(1000); */
-
 #include <Arduino.h>
 #include <LiquidCrystal_I2C.h>
-
 
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
@@ -52,9 +40,7 @@ void setup_wifi() {
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message arrived ");
-  Serial.print(topic);
-  Serial.print(" ");
+  
   for (int i=0;i<length;i++) {
     Serial.print((char)payload[i]);
   }
@@ -63,7 +49,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
   // Print a message to the LCD.
   lcd.backlight();
   lcd.setCursor(0,0);
-  lcd.print("");
+
+  for (int i=0;i<length;i++) {
+    lcd.print((char)payload[i]);
+  }
 }
 
 
@@ -99,6 +88,9 @@ void setup()
   setup_wifi();
   // Allow the hardware to sort itself out
   delay(1500);
+  lcd.init();                      // initialize the lcd 
+  // Print a message to the LCD.
+  lcd.backlight();
 }
 
 void loop()
@@ -108,3 +100,12 @@ void loop()
   }
   client.loop();
 }
+
+// set the LCD address to 0x27 for a 16 chars and 2 line display
+/*
+void setup()
+{
+
+  lcd.setCursor(0,0);
+  lcd.print("Michal Prokes");
+}*/
