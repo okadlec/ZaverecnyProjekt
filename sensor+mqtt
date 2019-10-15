@@ -141,5 +141,8 @@ int getFingerprintIDez() {
   if(finger.fingerID == 1 ){
   client.publish("andrej", "Palec");
   }
+  if(finger.fingerID == 2 ){
+  client.publish("andrej", "Ukazovacek");
+  } 
   return finger.fingerID; 
 }
