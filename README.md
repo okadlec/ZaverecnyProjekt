@@ -18,7 +18,7 @@ https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.
 - platform = espressif8266
 - board = esp12e
 - framework = arduino
--
+- LED -> 9
 - pio device monitor -b 115200
 - https://www.instructables.com/id/NodeMCU-MQTT-Basic-Example/
 - https://github.com/adibbazli/fingerprint-attendance
