@@ -107,6 +107,7 @@ void reconnect() {
 }
 
 void setup() {
+  pinMode(2, OUTPUT);
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   Serial.begin(115200);
   setup_wifi();
@@ -140,9 +141,14 @@ int getFingerprintIDez() {
   Serial.print(" with confidence of "); Serial.println(finger.confidence);
   if(finger.fingerID == 1 ){
   client.publish("andrej", "Palec");
+  digitalWrite(2, HIGH);   
+  delay(1000);              
+  digitalWrite(2, LOW);
   }
   if(finger.fingerID == 2 ){
   client.publish("andrej", "Ukazovacek");
   } 
   return finger.fingerID; 
 }
+
+
