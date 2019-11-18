@@ -1,11 +1,13 @@
 import paho.mqtt.client as mqtt #import the client1
 import time
 import json
+from datetime import datetime
 ############
 def on_message(client, userdata, message):
     print("message received " ,str(message.payload.decode("utf-8")))
     print("message topic=",message.topic)
-    data = {'topic': message.topic,'message': str(message.payload.decode("utf-8"))}
+    presentime = datetime.now()
+    data = {"topic": message.topic,"message": str(message.payload.decode("utf-8")),"time":presentime.strftime('%Y-%m-%d-%H-%M-%S')}
     json_file = open('personal.json', 'a+')
     json_file.write(str(data)+ '\n')
     print(data)
