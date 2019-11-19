@@ -8,7 +8,7 @@
 <br>https://randomnerdtutorials.com/fingerprint-sensor-module-with-arduino/
 
 <br>Cílem je vytvořit zámek do dveří ovládaný pomocí čtečky otisku prstů. Logy se budou nahrávat na server a ukládat do souboru JSON.
-
+<checkbox>Upravit napětí známku z 5V do 12V</checkbox>
 <br>Schéma zapojení čtečky:
 https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.png
 - Compiler - ESP8266 Board -> Wemos D1 R2
