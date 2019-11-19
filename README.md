@@ -5,9 +5,9 @@
 <br>Prosinec - Vylepšování projektu
 <br>Leden - Dokončení projektu a dokumentace
 <link>https://www.youtube.com/watch?v=qXjjVqQwLyY</link>
-- https://randomnerdtutorials.com/fingerprint-sensor-module-with-arduino/
+<br> https://randomnerdtutorials.com/fingerprint-sensor-module-with-arduino/
 
-- Cílem je vytvořit zámek do dveří ovládaný pomocí čtečky otisku prstů. Logy se budou nahrávat na server a ukládat do souboru JSON.
+<br> Cílem je vytvořit zámek do dveří ovládaný pomocí čtečky otisku prstů. Logy se budou nahrávat na server a ukládat do souboru JSON.
 
 - [ ]Upravit napětí známku z 5V do 12V
 <br>Schéma zapojení čtečky:
