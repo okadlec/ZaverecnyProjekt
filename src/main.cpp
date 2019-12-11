@@ -1,10 +1,14 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <Adafruit_Fingerprint.h>
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include <WiFiManager.h>
+
+
 SoftwareSerial mySerial(4, 5);
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
-const char* ssid = "ESPNet";
-const char* password = "";
+
 const char* mqtt_server = "broker.mqtt-dashboard.com";
 
 WiFiClient espClient;
@@ -13,7 +17,7 @@ long lastMsg = 0;
 char msg[50];
 int value = 0;
 
-void setup_wifi() {
+/*void setup_wifi() {
 
   delay(10);
   // We start by connecting to a WiFi network
@@ -34,7 +38,7 @@ void setup_wifi() {
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-}
+}*/
 
 void callback(char* topic, byte* payload, unsigned int length) {
 
@@ -77,7 +81,10 @@ void setup() {
   pinMode(13, OUTPUT);
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   Serial.begin(115200);
-  setup_wifi();
+  WiFiManager wifiManager;
+  wifiManager.autoConnect();
+  Serial.println("Connected.");
+  //setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   finger.begin(57600);
@@ -98,7 +105,7 @@ int getFingerprintIDez() {
   Serial.print("Found ID #"); Serial.print(finger.fingerID); 
   Serial.print(" with confidence of "); Serial.println(finger.confidence);
   if(finger.fingerID == 1 ){
-  client.publish("andrej", "Palec");
+  client.publish("andrej", "Kadlec Ondrej");
   digitalWrite(13, HIGH);   
   delay(1000);              
   digitalWrite(13, LOW);
