@@ -24,4 +24,4 @@
 - https://github.com/adibbazli/fingerprint-attendance
 - 
 <br> Koncept :
- <br>ESP čip se sám připojí na předem nakonfigurovanou wifi přes WifiManager. Na čtečku otisku prstů přiložím svůj prst uložený v paměti čtečky, čtečka po rozpoznání otisku pošle na mqtt server jméno uživatele. Z mqtt serveru si ho převezme python script, přidá k němu čas, datum, id a pošle tyto informace do databáze. Zámek se otevře.
+ <br>ESP čip se sám připojí na předem nakonfigurovanou wifi přes WifiManager. Na čtečku otisku prstů přiložím svůj prst uložený v paměti čtečky, čtečka po rozpoznání otisku pošle na mqtt server jméno uživatele. Z mqtt serveru si ho převezme python script, přidá k němu čas, datum, id a pošle tyto informace do databáze. Pro větší přehlednost se z databáze vezmou data a udělá se tabulka. Zámek se otevře.
