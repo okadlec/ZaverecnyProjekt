@@ -23,5 +23,5 @@
 - https://www.instructables.com/id/NodeMCU-MQTT-Basic-Example/
 - https://github.com/adibbazli/fingerprint-attendance
 - 
-- Koncept :
-- ESP čip se sám připojí na předem nakonfigurovanou wifi přes WifiManager. Na čtečku otisku prstů přiložím svůj prst uložený v paměti čtečky, čtečka po rozpoznání otisku pošle na mqtt server jméno uživatele. Z mqtt serveru si ho převezme python script, přidá k němu čas, datum, id a pošle tyto informace do databáze.
+<br> Koncept :
+ <br>ESP čip se sám připojí na předem nakonfigurovanou wifi přes WifiManager. Na čtečku otisku prstů přiložím svůj prst uložený v paměti čtečky, čtečka po rozpoznání otisku pošle na mqtt server jméno uživatele. Z mqtt serveru si ho převezme python script, přidá k němu čas, datum, id a pošle tyto informace do databáze.
