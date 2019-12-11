@@ -13,10 +13,10 @@ def on_message(client, userdata, message):
     data = {"topic": message.topic,"message": str(message.payload.decode("utf-8")),"time":presentime.strftime('%Y-%m-%d-%H-%M-%S')}
     zprava = str(message.payload.decode("utf-8"))
     cas = presentime.strftime('%Y-%m-%d-%H-%M-%S')
-   # json_file = open('personal.json', 'a+')
-   # json_file.write(str(data)+ '\n')
+    json_file = open('personal.json', 'a+')
+    json_file.write(str(data)+ '\n')
     print(data)
-  #  json_file.close()
+    json_file.close()
     global x
     connection = pymysql.connect(host='localhost',
                       user='root',
