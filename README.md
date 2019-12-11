@@ -10,7 +10,7 @@
 <br> Cílem je vytvořit zámek do dveří ovládaný pomocí čtečky otisku prstů. Logy se budou nahrávat na server a ukládat do souboru JSON.
 <br>Schéma zapojení čtečky: https://hackster.imgix.net/uploads/attachments/687481/fingerprint_bb_H4k0IdYAE7.png
 
-- [ ] Upravit napětí známku z 5V do 12V
+- Základní potřebné commandy, zapojení atd:
 - Compiler - ESP8266 Board -> Wemos D1 R2
 - SoftwareSerial mySerial(4,5);
 - Rx -> 3
@@ -22,3 +22,6 @@
 - pio device monitor -b 115200
 - https://www.instructables.com/id/NodeMCU-MQTT-Basic-Example/
 - https://github.com/adibbazli/fingerprint-attendance
+- 
+- Koncept :
+- ESP čip se sám připojí na předem nakonfigurovanou wifi přes WifiManager. Na čtečku otisku prstů přiložím svůj prst uložený v paměti čtečky, čtečka po rozpoznání otisku pošle na mqtt server jméno uživatele. Z mqtt serveru si ho převezme python script, přidá k němu čas, datum, id a pošle tyto informace do databáze.
