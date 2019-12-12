@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Stř 11. pro 2019, 21:13
+-- Vytvořeno: Čtv 12. pro 2019, 16:04
 -- Verze serveru: 10.4.10-MariaDB
 -- Verze PHP: 7.3.12
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `data` (
-  `id` int(5) NOT NULL,
+  `id` int(4) NOT NULL,
   `name` text COLLATE utf8_czech_ci NOT NULL,
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
@@ -39,9 +39,28 @@ CREATE TABLE `data` (
 --
 
 INSERT INTO `data` (`id`, `name`, `date`) VALUES
-(0, 'Kadlec Ondrej', '2019-12-11 16:26:26'),
-(1, 'Kadlec Ondrej', '2019-12-11 16:26:51'),
-(2, 'Kadlec Ondrej', '2019-12-11 16:27:45');
+(1, 'Python', '2019-12-12 16:01:48'),
+(2, 'Kadlec Ondrej', '2019-12-12 16:02:39');
+
+--
+-- Klíče pro exportované tabulky
+--
+
+--
+-- Klíče pro tabulku `data`
+--
+ALTER TABLE `data`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT pro tabulky
+--
+
+--
+-- AUTO_INCREMENT pro tabulku `data`
+--
+ALTER TABLE `data`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
